@@ -8,7 +8,8 @@ const resources = {
       about: 'About',
       contact: 'Contact',
       welcome: 'Welcome to our news portal!',
-      change_language: 'Change Language'
+      change_language: 'Change Language',
+      'The Wall Street Journal': 'The Wall Street Journal'
     }
   },
   pt: {
@@ -17,7 +18,9 @@ const resources = {
       about: 'Sobre',
       contact: 'Contato',
       welcome: 'Bem-vindo ao nosso portal de notícias!',
-      change_language: 'Trocar idioma'
+      change_language: 'Trocar idioma',
+      'The Wall Street Journal': 'O Jornal de Wall Street',
+      'Read News': 'Ler Notícia'
     }
   }
 };

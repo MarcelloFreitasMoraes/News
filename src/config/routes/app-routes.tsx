@@ -1,11 +1,11 @@
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
 import { PATHS } from './paths'
 import Home from '../../page/Home/Home'
-import Header from '../../ui/components/Header/Header'
+import BaseLayout from '../../ui/components/BaseLayout/BaseLayout'
 
 export const AppRoutes = () => (
     <BrowserRouter>
-        <Header />
+        <BaseLayout>
         <Routes>
             <Route
                 element={<Home />}
@@ -20,5 +20,6 @@ export const AppRoutes = () => (
                 />
             ))}
         </Routes>
+        </BaseLayout>
     </BrowserRouter>
 )

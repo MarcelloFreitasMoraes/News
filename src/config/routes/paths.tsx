@@ -1,6 +1,7 @@
 import About from '../../page/About/About'
 import Contact from '../../page/Contact/Contact'
 import Home from '../../page/Home/Home'
+import News from '../../page/Home/News/News'
 
 
 export const PATHS = [
@@ -9,7 +10,11 @@ export const PATHS = [
         element: <Home />,
     },
     {
-        path: '/sport',
+        path: '/news',
+        element: <News />,
+    },
+    {
+        path: '/about',
         element: <About />,
     },
     {

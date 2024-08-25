@@ -4,6 +4,8 @@ import { AppRoutes } from "./config/routes/app-routes.tsx";
 import { LanguageProvider } from "./context/LanguageContext.tsx";
 import { QueryClientProvider } from "@tanstack/react-query";
 import { queryClient } from "./context/react-query.ts";
+import './ui/styles/global.css'
+import 'leaflet/dist/leaflet.css';
 
 function App() {
   return (

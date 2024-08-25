@@ -3,16 +3,13 @@ import { Newservice } from '../service/useServeceData'
 
 const newservice = new Newservice()
 
-export default function useBusinessData(country: 'us' | 'pt') {
-    const { data: BusinessQuery } = useQuery({
-        queryKey: ['list', country],
-        queryFn: ({ queryKey }) => {
-            const [, country] = queryKey;
-            return newservice.fetchBusiness({ country: country as 'us' | 'pt' });
-        },
-    });
+    export default function useCnnBrasil() {
+        const { data: CnnBrasilQuery } = useQuery({
+            queryKey: ['list'],
+            queryFn: newservice.fetchCnnBrasil,
+        })
 
     return {
-        BusinessQuery,
+        CnnBrasilQuery,
     };
 }

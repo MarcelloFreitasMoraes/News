@@ -1,19 +1,21 @@
 import http from "../config/axios";
 
-type Country = "us" | "pt";
-
 export class Newservice {
-  async fetchBusiness({ country = "us" }: { country: Country }) {
+  async fetchBusiness(name: string ) {
     const { data } = await http.get(
-      `/top-headlines?country=${country}&category=business&apiKey=${
+      `/everything?domains=wsj.com?name=${name}&apiKey=${
         import.meta.env.VITE_PUBLIC_API_BASE_KEY
       }`
     );
     return data;
   }
 
-  async fetchAllCartMovies() {
-    const { data } = await http.get("/frutas/checkout.json");
+  async fetchCnnBrasil() {
+    const { data } = await http.get(
+      `/everything?domains=wsj.com&apiKey=${
+        import.meta.env.VITE_PUBLIC_API_BASE_KEY
+      }`
+    );
     return data;
   }
 }

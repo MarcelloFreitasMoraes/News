@@ -7,14 +7,16 @@ import Typography from '@mui/material/Typography';
 
 type Props = {
     title: string
-    description: string
+    labelButton: string
+    description?: string
     img: string
     alt: string
+    action?: () => void
 }
 
-export default function MediaCard({title,description, img, alt }: Props) {
+export default function MediaCard({title, description, img, alt, action, labelButton }: Props) {
   return (
-    <Card sx={{ maxWidth: 345 }}>
+    <Card sx={{ maxWidth: 345, height: '100%' }}>
       <CardMedia
         sx={{ height: 140 }}
         image={img}
@@ -29,8 +31,7 @@ export default function MediaCard({title,description, img, alt }: Props) {
         </Typography>
       </CardContent>
       <CardActions>
-        <Button size="small">Share</Button>
-        <Button size="small">Learn More</Button>
+        <Button size="small" sx={{textDecoration: 'upercase'}} onClick={action}>{labelButton}</Button>
       </CardActions>
     </Card>
   );
