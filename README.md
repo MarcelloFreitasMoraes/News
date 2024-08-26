@@ -1,50 +1,48 @@
-# React + TypeScript + Vite
+# 📰 The Wall Street Journal
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## 📋 Visão Geral do Projeto
 
-Currently, two official plugins are available:
+The Wall Street Journal React é uma aplicação de e-commerce simplificado focada em notícias, desenvolvida como solução para um desafio técnico. A aplicação utiliza React, TypeScript, Material-UI e react-i18next. Os usuários podem alternar entre os idiomas português e inglês.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- **Home**: Apresenta uma lista de notícias.
+- **News**: Permite visualizar um item específico da lista e ver mais informações.
+- **About**: Conta mais sobre quem é The Wall Street Journal.
+- **Contact**: Mostra a localização e opções para entrar em contato com The Wall Street Journal.
 
-## Expanding the ESLint configuration
+O design do projeto foi inspirado em outros sites de notícias, e a API utilizada é [NewsAPI](https://newsapi.org/).
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+## ⚙️ Tecnologias e Ferramentas
 
-- Configure the top-level `parserOptions` property like this:
+A escolha das tecnologias foi guiada pela necessidade de criar uma aplicação moderna, escalável e fácil de manter. Abaixo, detalhamos as principais ferramentas utilizadas e justificativas para suas escolhas:
 
-```js
-export default tseslint.config({
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
-```
+- **React**: Para desenvolvimento de interfaces de usuário dinâmicas e reativas, aproveitando o conceito de componentes reutilizáveis.
+- **TypeScript**: Adicionado para tipagem estática, melhorando a legibilidade, a manutenção e a detecção precoce de erros.
+- **Material-UI**: Segue as diretrizes do Material Design, garantindo um visual moderno e consistente.
+- **Axios**: Facilita as requisições HTTP à API com uma interface simples e baseada em Promises.
+- **React Query**: Gerencia e otimiza requisições de dados assíncronos, caching e atualizações de estado relacionadas à API.
+- **React Router Dom**: Gerencia as rotas da aplicação, permitindo uma navegação fluida entre diferentes telas.
+- **Vite**: Escolhido como ferramenta de build por oferecer um ambiente de desenvolvimento mais rápido e uma configuração simplificada.
 
-- Replace `tseslint.configs.recommended` to `tseslint.configs.recommendedTypeChecked` or `tseslint.configs.strictTypeChecked`
-- Optionally add `...tseslint.configs.stylisticTypeChecked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and update the config:
+## 🚀 Como Instalar e Executar o Projeto
 
-```js
-// eslint.config.js
-import react from 'eslint-plugin-react'
+### Pré-requisitos
+Certifique-se de ter o Node.js e o npm instalados em sua máquina. Eles são necessários para executar o projeto.
 
-export default tseslint.config({
-  // Set the react version
-  settings: { react: { version: '18.3' } },
-  plugins: {
-    // Add the react plugin
-    react,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended rules
-    ...react.configs.recommended.rules,
-    ...react.configs['jsx-runtime'].rules,
-  },
-})
-```
+### Passos para Executar
+1. Clone o repositório:
+    ```bash
+    git clone https://github.com/MarcelloFreitasMoraes/News.git
+    ```
+2. Acesse a pasta do projeto:
+    ```bash
+    cd News
+    ```
+3. Instale as dependências e execute o projeto:
+    ```bash
+    npm install
+    npm run dev
+    ```
+
+## ✨ Autor
+
+**Marcelo Moraes**
