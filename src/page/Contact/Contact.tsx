@@ -12,40 +12,42 @@ import {
 import { Facebook, Instagram, WhatsApp } from '@mui/icons-material';
 import { MapContainer, TileLayer, Marker, Popup } from 'react-leaflet';
 import 'leaflet/dist/leaflet.css';
+import { useTranslation } from 'react-i18next';
 
 const Contact: React.FC = () => {  
+  const { t } = useTranslation();
   return (
     <Container maxWidth="md" sx={{ mt: 4, mb: 4 }}>
       <Paper elevation={3} sx={{ padding: { xs: 2, sm: 4 } }}>
         <Typography variant="h4" component="h1" gutterBottom align="center">
-          Contact Us
+          {t('Contact Us')}
         </Typography>
         <Typography variant="subtitle1" align="center" color="textSecondary" gutterBottom>
-          We are here to help! Get in touch with us using the form below or through our contact information.
+          {t('We are here to help! Get in touch with us using the form below or through our contact information.')}
         </Typography>
 
         <Box mt={4} mb={4}>
           <Grid container spacing={4}>
             <Grid item xs={12} md={6}>
               <Typography variant="h6" gutterBottom>
-                Contact Information
+                {t('Contact Information')}
               </Typography>
               <Typography variant="body1" paragraph>
-                Email: <a href="mailto:contact@wallstreetjournal.com">contact@wallstreetjournal.com</a>
+              {t('E-mail')}: <a href="mailto:contact@wallstreetjournal.com">contact@wallstreetjournal.com</a>
               </Typography>
               <Typography variant="body1" paragraph>
-                Phone: <a href="tel:+551112345678">+55 11 1234-5678</a>
+                {t('Phone')}: <a href="tel:+551112345678">+55 11 1234-5678</a>
               </Typography>
               <Typography variant="body1" paragraph>
-                WhatsApp: <a href="https://wa.me/5511999998888">+55 11 99999-8888</a>
+                {t('WhatsApp')}: <a href="https://wa.me/5511999998888">+55 11 99999-8888</a>
               </Typography>
               <Typography variant="body1" paragraph>
-                Address: 1000 Paulista Avenue, São Paulo - SP, 01310-000
+                {t('Address')}: 1000 Paulista Avenue, São Paulo - SP, 01310-000
               </Typography>
 
               <Box mt={2}>
                 <Typography variant="h6" gutterBottom>
-                  Follow Us
+                  {t('Follow Us')}
                 </Typography>
                 <Box>
                   <IconButton color="primary" href="https://www.instagram.com/wallstreetjournal">
@@ -63,18 +65,18 @@ const Contact: React.FC = () => {
 
             <Grid item xs={12} md={6}>
               <Typography variant="h6" gutterBottom>
-                Contact Form
+                {t('Contact Form')}
               </Typography>
               <form noValidate autoComplete="off">
                 <TextField
-                  label="Name"
+                  label={t("Name")}
                   variant="outlined"
                   fullWidth
                   margin="normal"
                   required
                 />
                 <TextField
-                  label="Email"
+                  label={t("E-mail")}
                   variant="outlined"
                   fullWidth
                   margin="normal"
@@ -82,14 +84,14 @@ const Contact: React.FC = () => {
                   type="email"
                 />
                 <TextField
-                  label="Subject"
+                  label={t("Subject")}
                   variant="outlined"
                   fullWidth
                   margin="normal"
                   required
                 />
                 <TextField
-                  label="Message"
+                  label={t("Message")}
                   variant="outlined"
                   fullWidth
                   margin="normal"
@@ -99,7 +101,7 @@ const Contact: React.FC = () => {
                 />
                 <Box textAlign="center" mt={2}>
                   <Button variant="contained" color="primary" type="submit">
-                    Send
+                  {t('Send')}
                   </Button>
                 </Box>
               </form>
@@ -110,7 +112,7 @@ const Contact: React.FC = () => {
         {/* Map Section */}
         <Box mt={4}>
           <Typography variant="h6" gutterBottom>
-            Our Location
+          {t('Our Location')}
           </Typography>
           <MapContainer center={[-23.561684, -46.655881]} zoom={14} style={{ height: '400px', width: '100%' }}>
             <TileLayer

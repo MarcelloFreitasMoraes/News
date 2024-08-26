@@ -14,7 +14,7 @@ function Home() {
   const navigate = useNavigate();
   const redirectNavigate = (id: number | undefined) => navigate(`/News?id=${id}`);
   const articlesWithId = addIdToArticles(CnnBrasilQuery?.articles);
-  // console.log(articlesWithId, '<====');
+ 
   return (
     <Container>
       <Typography
@@ -37,10 +37,10 @@ function Home() {
                 key={item?.id}
               >
                 <MediaCard
-                  title={truncateText(t(item?.title), 75)}
-                  img={item?.urlToImage || DEFAULT}
-                  alt={item?.author as string}
-                  action={() => redirectNavigate(item.id)}
+                  title={truncateText(t(item?.title  ?? ''), 75)}
+                  img={item?.urlToImage ?? DEFAULT}
+                  alt={item?.author  ?? ''}
+                  action={() => redirectNavigate(item?.id)}
                   labelButton={t('Read News')}
                 />
               </Grid>

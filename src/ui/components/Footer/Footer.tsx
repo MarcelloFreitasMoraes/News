@@ -3,8 +3,10 @@ import {
   Grid,
   Typography,
 } from "@mui/material";
+import { useTranslation } from "react-i18next";
 
 const Footer: React.FC = () => { 
+  const { t } = useTranslation();
   return (
     <Grid
       container
@@ -30,7 +32,7 @@ const Footer: React.FC = () => {
             textAlign: "center",
           }}
         >
-          Copyright All Rights Reserved © 2024 |  Desenvolvido por Marcello Moraes
+          {t('Copyright All Rights Reserved')} © 2024 |  {t('Developed by')} Marcello Moraes
         </Typography>
       </Grid>
     </Grid>
