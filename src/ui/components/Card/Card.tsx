@@ -1,3 +1,4 @@
+import React from 'react';
 import Card from '@mui/material/Card';
 import CardActions from '@mui/material/CardActions';
 import CardContent from '@mui/material/CardContent';
@@ -6,15 +7,15 @@ import Button from '@mui/material/Button';
 import Typography from '@mui/material/Typography';
 
 type Props = {
-    title: string
-    labelButton: string
-    description?: string
-    img: string
-    alt: string
-    action?: () => void
+  title: string
+  labelButton: string
+  description?: string
+  img: string
+  alt: string
+  action?: () => void
 }
 
-export default function MediaCard({title, description, img, alt, action, labelButton }: Props) {
+const MediaCard: React.FC<Props> = ({title, description, img, alt, action, labelButton }) => {
   return (
     <Card sx={{ maxWidth: 345, height: '100%' }}>
       <CardMedia
@@ -36,3 +37,5 @@ export default function MediaCard({title, description, img, alt, action, labelBu
     </Card>
   );
 }
+
+export default MediaCard;
