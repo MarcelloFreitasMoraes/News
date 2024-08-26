@@ -1,6 +1,6 @@
 import React from "react";
 import { Typography } from "@mui/material";
-import { contactInfo } from "../mock/contact-info";
+import { contactInfo } from "../../../../ui/utils/mock/contact-info";
 import { useTranslation } from "react-i18next";
 
 const ContactInfo: React.FC = () => {

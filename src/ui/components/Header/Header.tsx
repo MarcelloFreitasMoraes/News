@@ -23,7 +23,18 @@ const Header: React.FC = () => {
       <Select
         value={i18n.language}
         onChange={(e) => changeLanguage(e.target.value)}
-        style={{ marginLeft: 'auto' }}
+        sx={{
+          marginLeft: 'auto',
+          '& .MuiSelect-select': {
+            border: 'none',
+            '&:hover': {
+              border: 'none',
+            },
+          },
+          '& .MuiOutlinedInput-notchedOutline': {
+            border: 'none',
+          },
+        }}
       >
         <MenuItem value="en">English</MenuItem>
         <MenuItem value="pt">Português</MenuItem>

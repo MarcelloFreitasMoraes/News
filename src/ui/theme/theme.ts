@@ -8,10 +8,12 @@ let theme = createTheme({
   palette: {
     primary: {
       main: "#d19c47",
+      dark:"#000",
     },
     secondary: {
       main: "#fff",
-    },
+      light: "#ddd",
+    }, 
   },
   typography: {
     fontFamily: '"Roboto", "Helvetica", "Arial", sans-serif',

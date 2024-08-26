@@ -15,7 +15,7 @@ const Contact: React.FC = () => {
   const { t } = useTranslation();
   return (
     <Container maxWidth="md" sx={{ mt: 4, mb: 4 }}>
-      <Paper elevation={3} sx={{ padding: { xs: 2, sm: 4 } }}>
+      <Paper elevation={3} sx={{ padding: { xs: 2, sm: 4 }, position: 'relative', zIndex: 10 }}>
         <Typography variant="h4" component="h1" gutterBottom align="center">
           {t("Contact Us")}
         </Typography>

@@ -9,18 +9,7 @@ import {
 import { useTranslation } from "react-i18next";
 import { TeamMember } from "../../ui/components";
 import { sections, teamMembers } from "../../ui/utils/mock/about";
-
-const SectionTitle: React.FC<{ title: string }> = ({ title }) => (
-  <Typography variant="h6" gutterBottom>
-    {title}
-  </Typography>
-);
-
-const SectionText: React.FC<{ text: string }> = ({ text }) => (
-  <Typography variant="body1" paragraph>
-    {text}
-  </Typography>
-);
+import { SectionText, SectionTitle } from "../../ui/utils/section-title-text";
 
 const About: React.FC = () => {
   const { t } = useTranslation();  
@@ -29,7 +18,7 @@ const About: React.FC = () => {
     <Container maxWidth="lg" sx={{ mt: 4, mb: 4 }}>
       <Paper
         elevation={3}
-        sx={{ padding: { xs: 2, sm: 4 }, marginTop: { xs: 2, sm: 4 } }}
+        sx={{ padding: { xs: 2, sm: 4 }, marginTop: { xs: 2, sm: 4 }, position: 'relative', zIndex: 10  }}
       >
         <Box textAlign="center" mb={4}>
           <Typography variant="h4" component="h1" gutterBottom>

@@ -15,7 +15,7 @@ type Props = {
   action?: () => void
 }
 
-const MediaCard: React.FC<Props> = ({title, description, img, alt, action, labelButton }) => {
+const CardComponent: React.FC<Props> = ({title, description, img, alt, action, labelButton }) => {
   return (
     <Card sx={{ maxWidth: 345, height: '100%' }}>
       <CardMedia
@@ -38,4 +38,4 @@ const MediaCard: React.FC<Props> = ({title, description, img, alt, action, label
   );
 }
 
-export default MediaCard;
+export default CardComponent;

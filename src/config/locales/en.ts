@@ -115,8 +115,8 @@ const enTranslations = {
     Send: "Send",
     "Developed by": "Developed by",
     "Copyright All Rights Reserved": "Copyright All Rights Reserved",
-    "We would love to hear from you! If you have any questions, comments, or feedback, please don't hesitate to reach out to us at":
-      "We would love to hear from you! If you have any questions, comments, or feedback, please don't hesitate to reach out to us at",
+    "We would love to hear from you! If you have any questions, comments, or feedback, please don't hesitate to reach out to us at ":
+      "We would love to hear from you! If you have any questions, comments, or feedback, please don't hesitate to reach out to us at ",
   },
 };
 

@@ -116,8 +116,8 @@ const ptTranslations = {
     "Developed by": "Desenvolvido por",
     "Copyright All Rights Reserved":
       "Direitos autorais Todos os direitos reservados",
-    "We would love to hear from you! If you have any questions, comments, or feedback, please don't hesitate to reach out to us at":
-      "Adoraríamos ouvir de você! Se você tiver alguma dúvida, comentário ou feedback, não hesite em entrar em contato conosco em",
+    "We would love to hear from you! If you have any questions, comments, or feedback, please don't hesitate to reach out to us at ":
+      "Adoraríamos ouvir de você! Se você tiver alguma dúvida, comentário ou feedback, não hesite em entrar em contato conosco em ",
   },
 };
 
